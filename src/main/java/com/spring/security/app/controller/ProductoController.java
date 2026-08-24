@@ -21,6 +21,16 @@ public class ProductoController {
     }
     /* fin inyeccion por constructor */
 
+    @GetMapping("/privado")
+    public String privado() {
+        return "Acceso permitido";
+    }
+
+    @GetMapping("/admin")
+    public String admin() {
+        return "Bienvenido administrador";
+    }
+
     @GetMapping
     public ResponseEntity<List<ProductoDTO>> listar() {
 
